@@ -58,6 +58,7 @@ plugins = plugins.concat([
         {
           resolve: 'gatsby-remark-copy-linked-files',
         },
+        'gatsby-remark-external-links',
       ],
       extensions: ['.mdx', '.md'],
     },
