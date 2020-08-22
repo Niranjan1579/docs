@@ -30,13 +30,13 @@ plugins = plugins.concat([
   },
   'gatsby-plugin-emotion',
   'gatsby-plugin-react-helmet',
-  // {
-  //   resolve: 'gatsby-source-filesystem',
-  //   options: {
-  //     name: 'docs',
-  //     path: `${__dirname}/content/`,
-  //   },
-  // },
+  {
+    resolve: 'gatsby-source-filesystem',
+    options: {
+      name: 'docs',
+      path: `${__dirname}/content/`,
+    },
+  },
   {
     resolve: 'gatsby-plugin-mdx',
     options: {
