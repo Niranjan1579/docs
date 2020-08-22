@@ -16,6 +16,7 @@ let plugins = [
       rootDir: 'docs',
     },
   },
+  'gatsby-plugin-catch-links',
 ];
 
 plugins = plugins.concat([
@@ -41,6 +42,13 @@ plugins = plugins.concat([
     options: {
       gatsbyRemarkPlugins: [
         {
+          resolve: 'gatsby-remark-link-rewrite',
+          options: {
+            pattern: /^\/docs\/(.*)\.(.+)(#.*)?$/,
+            replace: '/$1/$3',
+          },
+        },
+        {
           resolve: 'gatsby-remark-images',
           options: {
             maxWidth: 1035,
@@ -54,6 +62,7 @@ plugins = plugins.concat([
       extensions: ['.mdx', '.md'],
     },
   },
+
   {
     resolve: `gatsby-plugin-gtag`,
     options: {
