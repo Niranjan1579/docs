@@ -94,6 +94,11 @@ jobs:
     needs: init
     runs-on: ubuntu-latest
     name: Build
+    env:
+      GATSBY_ALGOLIA_APP_ID: Z0OPVMC7SS
+      GATSBY_ALGOLIA_SEARCH_KEY: 38dce1886782307efeb1a4bed2d82959
+      ALGOLIA_ADMIN_KEY: ${{secrets.ALGOLIA_ADMIN_KEY}}
+      GATSBY_ALGOLIA_INDEX_NAME: dev_actionsflow_docs
     steps:
       - name: Dump INIT_OUTPUTS
         run: echo $INIT_OUTPUTS

@@ -42,8 +42,8 @@ function myFunction() {
 
 const StyledBgDiv = styled('div')`
   height: 60px;
-  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
-  background-color: #f8f8f8;
+  box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.1);
+  background-color: #fff;
   position: relative;
   display: none;
   background: ${props => (props.isDarkThemeActive ? '#001932' : undefined)};
@@ -59,7 +59,6 @@ const Header = ({ location, isDarkThemeActive, toggleActiveTheme }) => (
       query headerTitleQuery {
         site {
           siteMetadata {
-            headerTitle
             githubUrl
             helpUrl
             tweetText
@@ -86,7 +85,7 @@ const Header = ({ location, isDarkThemeActive, toggleActiveTheme }) => (
 
       const {
         site: {
-          siteMetadata: { headerTitle, githubUrl, helpUrl, tweetText, logo, headerLinks },
+          siteMetadata: { githubUrl, helpUrl, tweetText, logo, headerLinks },
         },
       } = data;
 
@@ -103,10 +102,6 @@ const Header = ({ location, isDarkThemeActive, toggleActiveTheme }) => (
                   alt={'logo'}
                 />
               </Link>
-              <div
-                className={'headerTitle displayInline'}
-                dangerouslySetInnerHTML={{ __html: headerTitle }}
-              />
             </div>
             {config.header.social ? (
               <ul

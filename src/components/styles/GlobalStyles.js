@@ -160,10 +160,9 @@ export const baseStyles = css`
     width: 100%;
     background-color: rgba(28, 211, 198, 0.12) !important;
     border-width: 0 !important;
-    color: #c2c2c2;
     padding: 10px;
     border-radius: 5px;
-    color: #fff;
+    color: #001934;
     opacity: 0.6;
     padding-left: 38px;
     max-width: 600px;
@@ -257,22 +256,23 @@ export const baseStyles = css`
     padding: 0 !important;
   }
   .navBarDefault {
-    background-color: #001934;
+    background-color: #fff;
     border-radius: 0;
     border-top: 0;
     margin-bottom: 0;
     border: 0;
     display: flex;
     align-items: center;
-    box-shadow: -1px 0px 4px 1px rgba(175, 158, 232, 0.4);
-    -webkit-box-shadow: -1px 0px 4px 1px rgba(175, 158, 232, 0.4);
+    box-shadow: -1px 0px 4px 1px rgba(175, 158, 232, 0.1);
+    -webkit-box-shadow: -1px 0px 4px 1px rgba(175, 158, 232, 0.1);
     -moz-box-shadow: -1px 0px 4px 1px rgba(175, 158, 232, 0.8);
-    -o-box-shadow: -1px 0px 4px 1px rgba(175, 158, 232, 0.4);
+    -o-box-shadow: -1px 0px 4px 1px rgba(175, 158, 232, 0.1);
     z-index: 1;
     padding: 15px;
     position: relative;
     height: 80px;
   }
+
   .navBarHeader {
     min-width: 335px;
     padding-right: 20px;
@@ -286,7 +286,7 @@ export const baseStyles = css`
   }
 
   .navBarBrand img {
-    width: 120px;
+    width: 72px;
     margin-right: 6px;
     display: inline-block;
   }
@@ -807,6 +807,7 @@ export const baseStyles = css`
 
     .navBarDefault {
       display: block;
+      padding: 0;
       height: auto;
     }
 
@@ -820,7 +821,7 @@ export const baseStyles = css`
     }
 
     .navBarHeader {
-      display: flex;
+      display: none;
       min-width: auto;
       padding-right: 0;
       align-items: center;

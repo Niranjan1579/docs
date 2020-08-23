@@ -87,6 +87,7 @@ if (
   plugins.push({
     resolve: `gatsby-plugin-algolia`,
     options: {
+      enablePartialUpdates: true,
       appId: config.header.search.algoliaAppId, // algolia application id
       apiKey: config.header.search.algoliaAdminKey, // algolia admin key to index
       queries,
