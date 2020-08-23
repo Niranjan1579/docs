@@ -1,6 +1,6 @@
-import { injectGlobal } from 'emotion';
+import { css } from '@emotion/core';
 
-export const baseStyles = injectGlobal`
+export const baseStyles = css`
   @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap');
   @import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600&display=swap');
   * {
@@ -158,13 +158,13 @@ export const baseStyles = injectGlobal`
   }
   .searchInput {
     width: 100%;
-    background-color: rgba(28,211,198,.12) !important;
+    background-color: rgba(28, 211, 198, 0.12) !important;
     border-width: 0 !important;
-    color: #C2C2C2;
+    color: #c2c2c2;
     padding: 10px;
     border-radius: 5px;
     color: #fff;
-    opacity: .6;
+    opacity: 0.6;
     padding-left: 38px;
     max-width: 600px;
   }
@@ -320,7 +320,7 @@ export const baseStyles = injectGlobal`
     border: 0 !important;
     background-color: rgb(245, 247, 249); /* !important; */
   }
-  
+
   blockquote {
     color: rgb(116, 129, 141);
     margin: 0px 0px 24px;
@@ -338,7 +338,8 @@ export const baseStyles = injectGlobal`
   .socialWrapper li a {
     display: contents;
   }
-  .discordBtn, .twitterBtn {
+  .discordBtn,
+  .twitterBtn {
     border-radius: 4px;
     border: solid 1px #d1d2d3;
     background-color: #f1f5f8;
@@ -349,7 +350,7 @@ export const baseStyles = injectGlobal`
     display: flex;
     align-items: center;
     justify-content: center;
-    opacity: .8;
+    opacity: 0.8;
     cursor: pointer;
   }
   .twitterBtn img {
@@ -358,7 +359,8 @@ export const baseStyles = injectGlobal`
   .discordBtn img {
     width: 10px !important;
   }
-  .discordBtn:hover, .twitterBtn:hover {
+  .discordBtn:hover,
+  .twitterBtn:hover {
     opacity: 1;
   }
   .discordBtn {
@@ -470,7 +472,7 @@ export const baseStyles = injectGlobal`
   }
 
   .sideBarUL .item > a {
-    color: #1ED3C6;
+    color: #1ed3c6;
     text-decoration: none;
     display: flex;
     align-items: center;

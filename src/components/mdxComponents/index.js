@@ -2,7 +2,7 @@ import React from 'react';
 import styled from '@emotion/styled';
 
 import CodeBlock from './codeBlock';
-import AnchorTag from './anchor';
+// import AnchorTag from './anchor';
 
 const StyledPre = styled('pre')`
   padding: 16px;
