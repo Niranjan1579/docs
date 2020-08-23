@@ -103,8 +103,9 @@ const Results = connectStateResults(
 
 const useClickOutside = (ref, handler, events) => {
   if (!events) events = [`mousedown`, `touchstart`];
-  const detectClickOutside = event =>
-    ref && ref.current && !ref.current.contains(event.target) && handler();
+  const detectClickOutside = event => {
+    return ref && ref.current && !ref.current.contains(event.target) && handler();
+  };
 
   useEffect(() => {
     for (const event of events) document.addEventListener(event, detectClickOutside);
@@ -130,29 +131,30 @@ export default function SearchComponent({ indices, collapse, hitsAsGrid }) {
   const displayResult = query.length > 0 && focus ? 'showResults' : 'hideResults';
 
   return (
-    <InstantSearch
-      searchClient={searchClient}
-      indexName={indices[0].name}
-      onSearchStateChange={({ query }) => setQuery(query)}
-      root={{ Root, props: { ref } }}
-    >
-      <Input onFocus={() => setFocus(true)} {...{ collapse, focus }} />
-      <HitsWrapper
-        className={'hitWrapper ' + displayResult}
-        show={query.length > 0 && focus}
-        asGrid={hitsAsGrid}
+    <Root ref={ref}>
+      <InstantSearch
+        searchClient={searchClient}
+        indexName={indices[0].name}
+        onSearchStateChange={({ query }) => setQuery(query)}
       >
-        {indices.map(({ name, title, hitComp, type }) => {
-          return (
-            <Index key={name} indexName={name}>
-              <Results />
-              <Hits hitComponent={hitComps[hitComp](() => setFocus(false))} />
-            </Index>
-          );
-        })}
-        <PoweredBy />
-      </HitsWrapper>
-      <Configure hitsPerPage={5} />
-    </InstantSearch>
+        <Input onFocus={() => setFocus(true)} {...{ collapse, focus }} />
+        <HitsWrapper
+          className={'hitWrapper ' + displayResult}
+          show={query.length > 0 && focus}
+          asGrid={hitsAsGrid}
+        >
+          {indices.map(({ name, title, hitComp, type }) => {
+            return (
+              <Index key={name} indexName={name}>
+                <Results />
+                <Hits hitComponent={hitComps[hitComp](() => setFocus(false))} />
+              </Index>
+            );
+          })}
+          <PoweredBy />
+        </HitsWrapper>
+        <Configure hitsPerPage={5} />
+      </InstantSearch>
+    </Root>
   );
 }

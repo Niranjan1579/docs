@@ -12,7 +12,7 @@ class ThemeProvider extends React.Component {
   };
 
   componentDidMount() {
-    this.retrieveActiveTheme();
+    // this.retrieveActiveTheme();
   }
 
   retrieveActiveTheme = () => {

@@ -53,7 +53,7 @@ const StyledBgDiv = styled('div')`
   }
 `;
 
-const Header = ({ location, isDarkThemeActive, toggleActiveTheme }) => (
+const Header = ({ location, isDarkThemeActive }) => (
   <StaticQuery
     query={graphql`
       query headerTitleQuery {
@@ -66,6 +66,7 @@ const Header = ({ location, isDarkThemeActive, toggleActiveTheme }) => (
               link
               image
             }
+            headerTitle
             headerLinks {
               link
               text
@@ -85,7 +86,7 @@ const Header = ({ location, isDarkThemeActive, toggleActiveTheme }) => (
 
       const {
         site: {
-          siteMetadata: { githubUrl, helpUrl, tweetText, logo, headerLinks },
+          siteMetadata: { githubUrl, helpUrl, tweetText, logo, headerLinks, headerTitle },
         },
       } = data;
 
@@ -102,6 +103,10 @@ const Header = ({ location, isDarkThemeActive, toggleActiveTheme }) => (
                   alt={'logo'}
                 />
               </Link>
+              <div
+                className={'headerTitle displayInline'}
+                dangerouslySetInnerHTML={{ __html: headerTitle }}
+              />
             </div>
             {config.header.social ? (
               <ul
@@ -176,12 +181,6 @@ const Header = ({ location, isDarkThemeActive, toggleActiveTheme }) => (
                     </GitHubButton>
                   </li>
                 ) : null}
-                <li>
-                  <DarkModeSwitch
-                    isDarkThemeActive={isDarkThemeActive}
-                    toggleActiveTheme={toggleActiveTheme}
-                  />
-                </li>
               </ul>
             </div>
           </nav>

@@ -7,7 +7,8 @@ const config = {
   },
   header: {
     logo: 'https://ik.imagekit.io/owen/actionsflow/log_3zE01MsatzK.svg',
-    logoLink: 'https://actionsflow.github.io',
+    logoLink: '/',
+    title: '<a href="/docs">Actionsflow</a>',
     // title:
     //   "<a href='https://actionsflow.github.io'><img class='img-responsive' src='https://ik.imagekit.io/owen/actionsflow/sleep-pillow_pv7XHNgRw.jpg' alt='Learn logo' /></a>",
     githubUrl: 'https://github.com/actionsflow/actionsflow',

@@ -222,15 +222,15 @@ export const baseStyles = css`
   }
   .headerTitle {
     height: auto;
-    font-size: 16px;
+    font-size: 28px;
     line-height: 1.5;
-    font-weight: 300;
-    color: #fff !important;
-    margin-top: 16px;
-    text-transform: uppercase;
+    // font-weight: 300;
+    // color: #fff !important;
+    // margin-top: 16px;
+    // text-transform: uppercase;
   }
   .headerTitle a {
-    color: #fff;
+    color: #000;
   }
 
   .headerTitle a:hover {
@@ -757,7 +757,7 @@ export const baseStyles = css`
     }
     .headerTitle {
       padding-right: 50px;
-      font-size: 16px;
+      font-size: 20px;
     }
     .navBarBrand {
       min-height: 40px;
@@ -807,7 +807,6 @@ export const baseStyles = css`
 
     .navBarDefault {
       display: block;
-      padding: 0;
       height: auto;
     }
 
@@ -821,7 +820,7 @@ export const baseStyles = css`
     }
 
     .navBarHeader {
-      display: none;
+      display: flex;
       min-width: auto;
       padding-right: 0;
       align-items: center;
