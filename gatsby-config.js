@@ -59,7 +59,7 @@ plugins = plugins.concat([
           resolve: 'gatsby-remark-link-rewrite',
           options: {
             pattern: /^\/docs\/(.*)\.(.+)(#.*)?$/,
-            replace: '/$1$3',
+            replace: '/$1/$3',
           },
         },
         {

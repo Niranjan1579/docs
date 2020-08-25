@@ -6,7 +6,7 @@ const config = {
     pathPrefix: '/docs',
     siteUrl: 'https://actionsflow.github.io',
     gaTrackingId: 'UA-164063423-3',
-    trailingSlash: false,
+    trailingSlash: true,
   },
   header: {
     logo: 'https://ik.imagekit.io/owen/actionsflow/log_3zE01MsatzK.svg',
@@ -28,15 +28,15 @@ const config = {
   sidebar: {
     forcedNavOrder: [
       '/',
-      '/getting-started', // add trailing slash if enabled above
-      '/concepts',
-      '/triggers',
-      '/actions',
-      '/reference',
-      '/faqs',
-      '/compare',
-      '/contributing',
-      '/about',
+      '/getting-started/', // add trailing slash if enabled above
+      '/concepts/',
+      '/triggers/',
+      '/actions/',
+      '/reference/',
+      '/faqs/',
+      '/compare/',
+      '/contributing/',
+      '/about/',
     ],
     collapsedNav: [
       // '/reference',
