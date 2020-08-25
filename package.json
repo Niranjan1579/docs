@@ -61,6 +61,7 @@
   "scripts": {
     "start": "gatsby develop",
     "serve": "gatsby serve",
+    "clean": "gatsby clean",
     "build": "gatsby build --prefix-paths",
     "format": "prettier --write \"src/**/*.{js,jsx,css,json}\"",
     "lint": "eslint --fix \"src/**/*.{js,jsx}\""
