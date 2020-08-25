@@ -1,3 +1,6 @@
+console.log('env', process.env.NODE_ENV);
+const isDev = process.env.NODE_ENV === 'development';
+
 const config = {
   gatsby: {
     pathPrefix: '/docs',
@@ -8,9 +11,7 @@ const config = {
   header: {
     logo: 'https://ik.imagekit.io/owen/actionsflow/log_3zE01MsatzK.svg',
     logoLink: '/',
-    title: '<a href="/docs">Actionsflow</a>',
-    // title:
-    //   "<a href='https://actionsflow.github.io'><img class='img-responsive' src='https://ik.imagekit.io/owen/actionsflow/sleep-pillow_pv7XHNgRw.jpg' alt='Learn logo' /></a>",
+    title: `<a href="${isDev ? '/' : '/docs'}">Actionsflow</a>`,
     githubUrl: 'https://github.com/actionsflow/actionsflow',
     helpUrl: '',
     tweetText: '',
@@ -26,19 +27,28 @@ const config = {
   },
   sidebar: {
     forcedNavOrder: [
-      '/introduction', // add trailing slash if enabled above
-      '/codeblock',
+      '/',
+      '/getting-started', // add trailing slash if enabled above
+      '/concepts',
+      '/triggers',
+      '/actions',
+      '/reference',
+      '/faqs',
+      '/compare',
+      '/contributing',
+      '/about',
     ],
     collapsedNav: [
-      '/codeblock', // add trailing slash if enabled above
+      // '/reference',
+      // add trailing slash if enabled above
     ],
     links: [],
-    frontline: false,
-    ignoreIndex: true,
+    frontline: true,
+    ignoreIndex: false,
     title: '',
   },
   siteMetadata: {
-    title: 'Actionsflow Documentation | Actionsflow',
+    title: 'Actionsflow Documentation',
     description:
       'The one stop location for tutorials, guides, and information about building workflows with Actionsflow ',
     ogImage: null,

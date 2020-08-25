@@ -1,10 +1,25 @@
 require('dotenv').config();
+const path = require('path');
+
 const queries = require('./src/utils/algolia');
 
 const config = require('./config');
 
-let plugins = [
-  {
+const localDocsPath = process.env.LOCAL_DOCS_PATH;
+
+let plugins = ['gatsby-plugin-catch-links'];
+
+if (localDocsPath) {
+  plugins.push({
+    resolve: 'gatsby-source-filesystem',
+    options: {
+      name: 'git-docs',
+      path: path.resolve(__dirname, localDocsPath),
+    },
+  });
+} else {
+  // production
+  plugins.push({
     resolve: `@theowenyoung/gatsby-source-git`,
     options: {
       name: `git-docs`,
@@ -15,9 +30,8 @@ let plugins = [
       // patterns: 'docs/**/*',
       rootDir: 'docs',
     },
-  },
-  'gatsby-plugin-catch-links',
-];
+  });
+}
 
 plugins = plugins.concat([
   'gatsby-plugin-sitemap',
@@ -45,7 +59,7 @@ plugins = plugins.concat([
           resolve: 'gatsby-remark-link-rewrite',
           options: {
             pattern: /^\/docs\/(.*)\.(.+)(#.*)?$/,
-            replace: '/$1/$3',
+            replace: '/$1$3',
           },
         },
         {

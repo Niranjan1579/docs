@@ -68,6 +68,8 @@ export default class MDXRuntimeTest extends Component {
     // meta tags
     const metaTitle = mdx.frontmatter.metaTitle;
 
+    const docTitle = mdx.frontmatter.title;
+
     const metaDescription = mdx.frontmatter.metaDescription;
 
     let canonicalUrl = config.gatsby.siteUrl;
@@ -75,12 +77,20 @@ export default class MDXRuntimeTest extends Component {
     canonicalUrl =
       config.gatsby.pathPrefix !== '/' ? canonicalUrl + config.gatsby.pathPrefix : canonicalUrl;
     canonicalUrl = canonicalUrl + mdx.fields.slug;
+    let pageTitle = ` | ${title}`;
 
+    if (metaTitle) {
+      pageTitle = metaTitle + pageTitle;
+    } else if (docTitle) {
+      pageTitle = docTitle + pageTitle;
+    } else {
+      pageTitle = title;
+    }
     return (
       <Layout {...this.props}>
         <Helmet>
-          {metaTitle ? <title>{metaTitle}</title> : null}
-          {metaTitle ? <meta name="title" content={metaTitle} /> : null}
+          {pageTitle ? <title>{pageTitle}</title> : null}
+          {pageTitle ? <meta name="title" content={pageTitle} /> : null}
           {metaDescription ? <meta name="description" content={metaDescription} /> : null}
           {metaTitle ? <meta property="og:title" content={metaTitle} /> : null}
           {metaDescription ? <meta property="og:description" content={metaDescription} /> : null}
