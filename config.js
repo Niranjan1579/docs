@@ -5,7 +5,7 @@ const config = {
   gatsby: {
     pathPrefix: '/docs',
     siteUrl: 'https://actionsflow.github.io',
-    gaTrackingId: null,
+    gaTrackingId: 'UA-164063423-3',
     trailingSlash: false,
   },
   header: {
@@ -50,7 +50,7 @@ const config = {
   siteMetadata: {
     title: 'Actionsflow Documentation',
     description:
-      'The one stop location for tutorials, guides, and information about building workflows with Actionsflow ',
+      'Actionsflow is a tool for developers to build and run workflows. Like IFTTT, Zapier,you can run a workflow that is triggered by RSS, Webhook, Poll, Telegram Bot, and the other triggers that actionsflow supported',
     ogImage: null,
     docsLocation: 'https://github.com/actionsflow/actionsflow/tree/master/docs',
     favicon: 'https://ik.imagekit.io/owen/actionsflow/log_3zE01MsatzK.svg',
@@ -58,9 +58,9 @@ const config = {
   pwa: {
     enabled: false, // disabling this will also remove the existing service worker.
     manifest: {
-      name: 'Gatsby Gitbook Starter',
-      short_name: 'GitbookStarter',
-      start_url: '/',
+      name: 'Actionsflow Documentation',
+      short_name: 'Actionsflow',
+      start_url: '/docs',
       background_color: '#6b37bf',
       theme_color: '#6b37bf',
       display: 'standalone',
