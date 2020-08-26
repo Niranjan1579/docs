@@ -30,9 +30,9 @@ const config = {
       '/',
       '/getting-started/', // add trailing slash if enabled above
       '/concepts/',
+      '/reference/',
       '/triggers/',
       '/steps/',
-      '/reference/',
       '/faqs/',
       '/compare/',
       '/contributing/',
