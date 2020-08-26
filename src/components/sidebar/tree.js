@@ -3,7 +3,7 @@ import config from '../../../config';
 import TreeNode from './treeNode';
 
 const calculateTreeData = edges => {
-  const originalData = config.sidebar.ignoreIndex
+  let originalData = config.sidebar.ignoreIndex
     ? edges.filter(
         ({
           node: {
@@ -13,6 +13,15 @@ const calculateTreeData = edges => {
       )
     : edges;
 
+  originalData = config.sidebar.ignoreReadme
+    ? edges.filter(
+        ({
+          node: {
+            fields: { slug },
+          },
+        }) => slug !== '/README/'
+      )
+    : edges;
   const tree = originalData.reduce(
     (
       accu,

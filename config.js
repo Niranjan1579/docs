@@ -45,6 +45,7 @@ const config = {
     links: [],
     frontline: true,
     ignoreIndex: false,
+    ignoreReadme: true,
     title: '',
   },
   siteMetadata: {

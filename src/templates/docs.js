@@ -29,7 +29,13 @@ export default class MDXRuntimeTest extends Component {
 
     const navItems = allMdx.edges
       .map(({ node }) => node.fields.slug)
-      .filter(slug => slug !== '/')
+      .filter(slug => {
+        let pathArr = slug.split('/');
+
+        let suffix = pathArr[pathArr.length - 2];
+
+        return suffix !== '' && suffix !== 'README';
+      })
       .sort()
       .reduce(
         (acc, cur) => {
