@@ -1,9 +1,10 @@
-name: Bloga Deploy
+name: Actionsflow Docs Deploy
 on:
   push:
     branches:
       - master
   pull_request:
+  workflow_dispatch:
   repository_dispatch:
     types: [redeploy]
 env:
@@ -140,8 +141,8 @@ jobs:
             ${{ runner.os }}-yarn-
       - name: Yarn install
         run: 'yarn --pure-lockfile'
-      - name: Build app with prefix path
-        run: yarn build --prefix-paths
+      - name: Build app
+        run: yarn build
       - name: Get gatsby latest cache folder hash
         id: gatsby-latest-cache-hash
         uses: theowenyoung/folder-hash@v2.0.1
