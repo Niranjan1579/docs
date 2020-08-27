@@ -96,13 +96,13 @@ const Header = ({ location, isDarkThemeActive }) => (
         <div className={'navBarWrapper'}>
           <nav className={'navBarDefault'}>
             <div className={'navBarHeader'}>
-              <Link to={finalLogoLink} className={'navBarBrand'}>
+              <a href={finalLogoLink} className={'navBarBrand'}>
                 <img
                   className={'img-responsive displayInline'}
                   src={logo.image !== '' ? logo.image : logoImg}
                   alt={'logo'}
                 />
-              </Link>
+              </a>
               <div
                 className={'headerTitle displayInline'}
                 dangerouslySetInnerHTML={{ __html: headerTitle }}

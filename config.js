@@ -11,7 +11,7 @@ const config = {
   header: {
     logo: 'https://ik.imagekit.io/owen/actionsflow/log_3zE01MsatzK.svg',
     logoLink: '/',
-    title: `<a href="${isDev ? '/' : '/docs'}">Actionsflow</a>`,
+    title: `<a href="${isDev ? '/' : '/docs/'}">Actionsflow</a>`,
     githubUrl: 'https://github.com/actionsflow/actionsflow',
     helpUrl: '',
     tweetText: '',
@@ -61,7 +61,7 @@ const config = {
     manifest: {
       name: 'Actionsflow Documentation',
       short_name: 'Actionsflow',
-      start_url: '/docs',
+      start_url: '/docs/',
       background_color: '#6b37bf',
       theme_color: '#6b37bf',
       display: 'standalone',
