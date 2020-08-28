@@ -30,16 +30,17 @@ const config = {
       '/',
       '/getting-started/', // add trailing slash if enabled above
       '/concepts/',
-      '/reference/',
+      '/workflow/',
       '/triggers/',
       '/steps/',
+      '/reference/',
       '/faqs/',
       '/compare/',
       '/contributing/',
       '/about/',
     ],
     collapsedNav: [
-      // '/reference',
+      '/reference/',
       // add trailing slash if enabled above
     ],
     links: [],
