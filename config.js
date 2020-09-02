@@ -54,7 +54,7 @@ const config = {
     description:
       'Actionsflow is a tool for developers to build and run workflows. Like IFTTT, Zapier,you can run a workflow that is triggered by RSS, Webhook, Poll, Telegram Bot, and the other triggers that actionsflow supported',
     ogImage: null,
-    docsLocation: 'https://github.com/actionsflow/actionsflow/tree/master/docs',
+    docsLocation: 'https://github.com/actionsflow/actionsflow/tree/master',
     favicon: 'https://ik.imagekit.io/owen/actionsflow/log_3zE01MsatzK.svg',
   },
   pwa: {
