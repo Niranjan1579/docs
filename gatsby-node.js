@@ -76,10 +76,24 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
 
     let value = parent.relativePath.replace(parent.ext, '');
 
+    if (value.startsWith('docs/')) {
+      value = value.slice(5);
+    }
+
     if (value === 'index') {
       value = '';
     }
 
+    // officail trigger doc
+    const triggerPackageDocRegex = new RegExp('packages/actionsflow-trigger-(.+?)/README');
+
+    if (triggerPackageDocRegex.test(value)) {
+      const regexResult = value.match(triggerPackageDocRegex);
+
+      if (regexResult && regexResult[1]) {
+        value = `triggers/${regexResult[1]}`;
+      }
+    }
     if (config.gatsby && config.gatsby.trailingSlash) {
       createNodeField({
         name: `slug`,

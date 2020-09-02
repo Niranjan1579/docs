@@ -15,6 +15,22 @@ if (localDocsPath) {
     options: {
       name: 'git-docs',
       path: path.resolve(__dirname, localDocsPath),
+      ignore: ['**/README.md'],
+    },
+  });
+  plugins.push({
+    resolve: 'gatsby-source-filesystem',
+    options: {
+      name: 'git-docs',
+      path: path.resolve(__dirname, localDocsPath, '../packages'),
+      ignore: [
+        '**/actionsflow/README.md',
+        '**/actionsflow-cli/README.md',
+        '**/actionsflow-action/README.md',
+        '**/actionsflow-interface/README.md',
+        '**/CONTRIBUTING.md',
+        '**/CHANGELOG.md',
+      ],
     },
   });
 } else {
@@ -27,8 +43,7 @@ if (localDocsPath) {
       branch: 'master',
       // Optionally supply a branch. If none supplied, you'll get the default branch.
       // Tailor which files get imported eg. import the docs folder from a codebase.
-      // patterns: 'docs/**/*',
-      rootDir: 'docs',
+      patterns: ['docs/**/*.md', '!docs/**/README.md', 'packages/actionsflow-trigger*/README.md'],
     },
   });
 }
@@ -73,6 +88,7 @@ plugins = plugins.concat([
           resolve: 'gatsby-remark-copy-linked-files',
         },
         'gatsby-remark-external-links',
+        'gatsby-remark-autolink-headers',
       ],
       extensions: ['.mdx', '.md'],
     },
