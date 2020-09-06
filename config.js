@@ -32,6 +32,7 @@ const config = {
       '/concepts/',
       '/workflow/',
       '/triggers/',
+      '/creating-triggers/',
       '/steps/',
       '/reference/',
       '/faqs/',
