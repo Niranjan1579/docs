@@ -15,21 +15,20 @@ if (localDocsPath) {
     options: {
       name: 'git-docs',
       path: path.resolve(__dirname, localDocsPath),
-      ignore: ['**/README.md'],
-    },
-  });
-  plugins.push({
-    resolve: 'gatsby-source-filesystem',
-    options: {
-      name: 'git-docs',
-      path: path.resolve(__dirname, localDocsPath, '../packages'),
       ignore: [
+        '**/docs/**/README.md',
+        '**/examples/**/*',
+        '**/.github/**/*',
         '**/actionsflow/README.md',
         '**/actionsflow-cli/README.md',
         '**/actionsflow-action/README.md',
         '**/actionsflow-interface/README.md',
         '**/CONTRIBUTING.md',
         '**/CHANGELOG.md',
+        '**/.git/**/*',
+        '**/dist/**/*',
+        '**/.cache/**/*',
+        '**/src/**/*',
       ],
     },
   });

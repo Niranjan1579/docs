@@ -1,5 +1,7 @@
 const componentWithMDXScope = require('gatsby-plugin-mdx/component-with-mdx-scope');
 
+const { titleCase } = require('title-case');
+
 const path = require('path');
 
 const startCase = require('lodash.startcase');
@@ -92,6 +94,8 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
 
       if (regexResult && regexResult[1]) {
         value = `triggers/${regexResult[1]}`;
+        // change node formatter
+        node.frontmatter.title = titleCase(regexResult[1]);
       }
     }
     if (config.gatsby && config.gatsby.trailingSlash) {
