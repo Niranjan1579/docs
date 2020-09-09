@@ -95,7 +95,9 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
       if (regexResult && regexResult[1]) {
         value = `triggers/${regexResult[1]}`;
         // change node formatter
-        node.frontmatter.title = titleCase(regexResult[1]);
+        if (!node.frontmatter.title) {
+          node.frontmatter.title = titleCase(regexResult[1]);
+        }
       }
     }
     if (config.gatsby && config.gatsby.trailingSlash) {
