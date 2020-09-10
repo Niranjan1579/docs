@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+<url> <loc>https://actionsflow.github.io/docs/about/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://actionsflow.github.io/docs/compare/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://actionsflow.github.io/docs/concepts/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://actionsflow.github.io/docs/contributing/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://actionsflow.github.io/docs/creating-triggers/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://actionsflow.github.io/docs/faqs/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://actionsflow.github.io/docs/getting-started/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://actionsflow.github.io/docs/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://actionsflow.github.io/docs/reference/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://actionsflow.github.io/docs/steps/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://actionsflow.github.io/docs/triggers/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://actionsflow.github.io/docs/upgrade/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://actionsflow.github.io/docs/workflow/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://actionsflow.github.io/docs/creating-triggers/creating-a-generic-trigger/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://actionsflow.github.io/docs/creating-triggers/creating-a-local-trigger/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://actionsflow.github.io/docs/reference/1-action-api/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://actionsflow.github.io/docs/reference/2-api/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://actionsflow.github.io/docs/reference/3-cli/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://actionsflow.github.io/docs/reference/4-trigger-helpers/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://actionsflow.github.io/docs/reference/5-webhook/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://actionsflow.github.io/docs/triggers/0-rss/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://actionsflow.github.io/docs/triggers/1-poll/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://actionsflow.github.io/docs/triggers/2-webhook/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://actionsflow.github.io/docs/triggers/3-script/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://actionsflow.github.io/docs/triggers/telegram_bot/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://actionsflow.github.io/docs/triggers/twitter/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+</urlset>
